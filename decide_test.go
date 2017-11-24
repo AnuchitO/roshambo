@@ -43,14 +43,41 @@ func TestRockTieRock(t *testing.T) {
 
 // paper covers rock
 func TestPaperCoversRock(t *testing.T) {
+	user := "Paper"
+	computer := "Rock"
+
+	result := Decide(user, computer)
+
+	expect := "WIN"
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
+	}
 }
 
 // paper Loss scissors
 func TestPaperLossScissors(t *testing.T) {
+	user := "Paper"
+	computer := "Scissors"
+
+	result := Decide(user, computer)
+
+	expect := "LOSS"
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
+	}
 }
 
 // Paper Tie Paper
 func TestPaperTiePaper(t *testing.T) {
+	user := "Paper"
+	computer := "Paper"
+
+	result := Decide(user, computer)
+
+	expect := "TIE"
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
+	}
 }
 
 // "scissors cut[s] paper"
