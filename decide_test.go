@@ -4,12 +4,12 @@ import "testing"
 
 // "rock crushes scissors"
 func TestRockCrushesScissors(t *testing.T) {
-	user := "Rock"
-	computer := "Scissors"
+	user := Rock
+	computer := Scissors
 
 	result := Decide(user, computer)
 
-	expect := "WIN"
+	expect := WIN
 	if expect != result {
 		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
@@ -17,12 +17,12 @@ func TestRockCrushesScissors(t *testing.T) {
 
 // "rock covered with paper"
 func TestRockLossPaper(t *testing.T) {
-	user := "Rock"
-	computer := "Paper"
+	user := Rock
+	computer := Paper
 
 	result := Decide(user, computer)
 
-	expect := "LOSS"
+	expect := LOSS
 	if expect != result {
 		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
@@ -30,12 +30,12 @@ func TestRockLossPaper(t *testing.T) {
 
 // "Rock Tie Rock"
 func TestRockTieRock(t *testing.T) {
-	user := "Rock"
-	computer := "Rock"
+	user := Rock
+	computer := Rock
 
 	result := Decide(user, computer)
 
-	expect := "TIE"
+	expect := TIE
 	if expect != result {
 		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
@@ -43,12 +43,12 @@ func TestRockTieRock(t *testing.T) {
 
 // paper covers rock
 func TestPaperCoversRock(t *testing.T) {
-	user := "Paper"
-	computer := "Rock"
+	user := Paper
+	computer := Rock
 
 	result := Decide(user, computer)
 
-	expect := "WIN"
+	expect := WIN
 	if expect != result {
 		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
@@ -56,12 +56,12 @@ func TestPaperCoversRock(t *testing.T) {
 
 // paper Loss scissors
 func TestPaperLossScissors(t *testing.T) {
-	user := "Paper"
-	computer := "Scissors"
+	user := Paper
+	computer := Scissors
 
 	result := Decide(user, computer)
 
-	expect := "LOSS"
+	expect := LOSS
 	if expect != result {
 		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
@@ -69,12 +69,12 @@ func TestPaperLossScissors(t *testing.T) {
 
 // Paper Tie Paper
 func TestPaperTiePaper(t *testing.T) {
-	user := "Paper"
-	computer := "Paper"
+	user := Paper
+	computer := Paper
 
 	result := Decide(user, computer)
 
-	expect := "TIE"
+	expect := TIE
 	if expect != result {
 		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
