@@ -9,8 +9,9 @@ func TestRockCrushesScissors(t *testing.T) {
 
 	result := Decide(user, computer)
 
-	if "WIN" != result {
-		t.Errorf("Rock Crushes Scissors Expected: '%s' but got '%s'", "WIN", result)
+	expect := "WIN"
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
 }
 
@@ -21,8 +22,9 @@ func TestRockLossPaper(t *testing.T) {
 
 	result := Decide(user, computer)
 
-	if "LOSS" != result {
-		t.Errorf("Rock Loss Paper Expected: '%s' but got '%s'", "LOSS", result)
+	expect := "LOSS"
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
 }
 
@@ -33,8 +35,9 @@ func TestRockTieRock(t *testing.T) {
 
 	result := Decide(user, computer)
 
-	if "TIE" != result {
-		t.Errorf("Rock Tie Rock Expected: '%s' but got '%s'", "TIE", result)
+	expect := "TIE"
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
 	}
 }
 
