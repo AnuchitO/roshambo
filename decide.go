@@ -10,33 +10,27 @@ var (
 )
 
 func Decide(user, computer string) string {
-	if user == Paper {
-		if computer == Scissors {
-			return LOSS
-		}
-		if computer == Rock {
-			return WIN
-		}
+	paper := map[string]string{
+		Paper:    TIE,
+		Rock:     WIN,
+		Scissors: LOSS,
+	}
+	rock := map[string]string{
+		Paper:    LOSS,
+		Rock:     TIE,
+		Scissors: WIN,
+	}
+	scissors := map[string]string{
+		Paper:    WIN,
+		Rock:     LOSS,
+		Scissors: TIE,
 	}
 
-	if user == Scissors {
-		if computer == Rock {
-			return LOSS
-		}
-		if computer == Paper {
-			return WIN
-		}
+	roshambo := map[string]map[string]string{
+		Paper:    paper,
+		Rock:     rock,
+		Scissors: scissors,
 	}
 
-	if user == Rock {
-		if computer == Paper {
-			return LOSS
-		}
-
-		if computer == Scissors {
-			return WIN
-		}
-	}
-
-	return TIE
+	return roshambo[user][computer]
 }
