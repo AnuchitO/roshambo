@@ -20,6 +20,16 @@ func Decide(user, computer string) string {
 		return WIN
 	}
 
+	if user == Scissors {
+		if computer == Rock {
+			return LOSS
+		}
+		if computer == Scissors {
+			return TIE
+		}
+		return WIN
+	}
+
 	if computer == Paper {
 		return LOSS
 	}

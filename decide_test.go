@@ -82,12 +82,39 @@ func TestPaperTiePaper(t *testing.T) {
 
 // "scissors cut[s] paper"
 func TestScissorsCutPaper(t *testing.T) {
+	user := Scissors
+	computer := Paper
+
+	result := Decide(user, computer)
+
+	expect := WIN
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
+	}
 }
 
 // "scissors loss rock"
 func TestScissorsLossRock(t *testing.T) {
+	user := Scissors
+	computer := Rock
+
+	result := Decide(user, computer)
+
+	expect := LOSS
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
+	}
 }
 
 // "scissors Tie scissors"
 func TestScissorsTieScissors(t *testing.T) {
+	user := Scissors
+	computer := Scissors
+
+	result := Decide(user, computer)
+
+	expect := TIE
+	if expect != result {
+		t.Errorf("%s %s %s but got %s", user, expect, computer, result)
+	}
 }
