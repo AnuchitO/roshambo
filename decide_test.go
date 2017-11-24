@@ -15,11 +15,27 @@ func TestRockCrushesScissors(t *testing.T) {
 }
 
 // "rock covered with paper"
-func TestRockCoverByRock(t *testing.T) {
+func TestRockLossPaper(t *testing.T) {
+	user := "Rock"
+	computer := "Paper"
+
+	result := Decide(user, computer)
+
+	if "LOSS" != result {
+		t.Errorf("Rock Loss Paper Expected: '%s' but got '%s'", "LOSS", result)
+	}
 }
 
 // "Rock Tie Rock"
 func TestRockTieRock(t *testing.T) {
+	user := "Rock"
+	computer := "Rock"
+
+	result := Decide(user, computer)
+
+	if "TIE" != result {
+		t.Errorf("Rock Tie Rock Expected: '%s' but got '%s'", "TIE", result)
+	}
 }
 
 // paper covers rock
