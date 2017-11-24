@@ -14,29 +14,29 @@ func Decide(user, computer string) string {
 		if computer == Scissors {
 			return LOSS
 		}
-		if computer == Paper {
-			return TIE
+		if computer == Rock {
+			return WIN
 		}
-		return WIN
 	}
 
 	if user == Scissors {
 		if computer == Rock {
 			return LOSS
 		}
-		if computer == Scissors {
-			return TIE
+		if computer == Paper {
+			return WIN
 		}
-		return WIN
 	}
 
-	if computer == Paper {
-		return LOSS
+	if user == Rock {
+		if computer == Paper {
+			return LOSS
+		}
+
+		if computer == Scissors {
+			return WIN
+		}
 	}
 
-	if computer == Rock {
-		return TIE
-	}
-
-	return WIN
+	return TIE
 }
