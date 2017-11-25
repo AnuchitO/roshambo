@@ -1,6 +1,6 @@
 package display
 
-var paperArt = `
+var PaperArt = `
                                                                 
                            /..//      ./*                       
                           /...../   .*..../                     
@@ -33,7 +33,7 @@ var paperArt = `
                                                                 
 `
 
-var rockArt = `
+var RockArt = `
                                                                 
                                                                 
                                                                 
@@ -66,7 +66,7 @@ var rockArt = `
                                                                 
 `
 
-var scissorsArt = `
+var ScissorsArt = `
                                                                  
                                                                  
                   ./*//                                          
