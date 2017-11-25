@@ -1,5 +1,7 @@
 package main
 
+import "strings"
+
 var paperArt = `
 
                        /..//      ./*
@@ -98,3 +100,15 @@ var scissorsArt = `
 
 
 `
+
+func maxWidth(art string) int {
+	al := strings.Split(art, "\n")
+	l := 0
+	for _, item := range al {
+		il := len(item)
+		if il > l {
+			l = il
+		}
+	}
+	return l
+}
