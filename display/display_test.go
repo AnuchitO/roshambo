@@ -68,7 +68,7 @@ func TestConcatSameLineForDisplay(t *testing.T) {
 func TestDisplay(t *testing.T) {
 	d := Display(decide.Paper, decide.Rock)
 
-	lenOfConcat := 3871
+	lenOfConcat := 3742
 	if len(d) != lenOfConcat {
 		t.Errorf("expect %d, but got '%d'", lenOfConcat, len(d))
 	}
