@@ -14,6 +14,6 @@ func concatSameLineForDisplay(artLeft, artRight []string) string {
 	return strings.Join(result, "\n")
 }
 
-func Display(user, computer string) string {
-	return concatSameLineForDisplay(splitArtAscii(user), splitArtAscii(computer))
+func Display(userArt, computerArt string) string {
+	return concatSameLineForDisplay(splitArtAscii(userArt), splitArtAscii(computerArt))
 }

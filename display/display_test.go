@@ -62,3 +62,14 @@ func TestConcatSameLineForDisplay(t *testing.T) {
 		t.Errorf("expect:\n % #v\n but got: \n % #v\n", expected, result)
 	}
 }
+
+func TestDisplay(t *testing.T) {
+	ua := "left\nleft 2"
+	ca := "right\nright 2"
+	d := Display(ua, ca)
+
+	expected := "leftright\nleft 2right 2"
+	if d != expected {
+		t.Errorf("expect %s, but got %s", expected, d)
+	}
+}
