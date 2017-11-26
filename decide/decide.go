@@ -9,6 +9,12 @@ var (
 	LOSS     = "loss"
 )
 
+var Choices = []string{
+	Paper,
+	Rock,
+	Scissors,
+}
+
 func Decide(user, computer string) string {
 	paper := map[string]string{
 		Paper:    TIE,
