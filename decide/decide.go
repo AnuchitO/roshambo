@@ -4,9 +4,9 @@ var (
 	Paper    = "Paper"
 	Scissors = "Scissors"
 	Rock     = "Rock"
-	TIE      = "TIE"
-	WIN      = "WIN"
-	LOSS     = "LOSS"
+	TIE      = "tie"
+	WIN      = "win"
+	LOSS     = "loss"
 )
 
 func Decide(user, computer string) string {
