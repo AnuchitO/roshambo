@@ -1,4 +1,4 @@
-package main
+package decide
 
 var (
 	Paper    = "Paper"
