@@ -7,11 +7,11 @@ import (
 	"github.com/AnuchitPrasertsang/roshambo/decide"
 )
 
-func Choice() string {
+func RandomChoice() string {
 	rand.Seed(time.Now().UTC().UnixNano())
-	return choice(rand.Intn(3))
+	return randomChoice(rand.Intn(3))
 }
 
-func choice(random int) string {
+func randomChoice(random int) string {
 	return decide.Choices[random]
 }

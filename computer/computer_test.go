@@ -7,13 +7,13 @@ import (
 )
 
 func TestChoice(t *testing.T) {
-	if choice(0) != decide.Paper {
-		t.Error("choice 0 should be Paper but got", choice(0))
+	if randomChoice(0) != decide.Paper {
+		t.Error("choice 0 should be Paper but got", randomChoice(0))
 	}
-	if choice(1) != decide.Rock {
-		t.Error("choice 1 should be Rock but got", choice(1))
+	if randomChoice(1) != decide.Rock {
+		t.Error("choice 1 should be Rock but got", randomChoice(1))
 	}
-	if choice(2) != decide.Scissors {
-		t.Error("choice 2 should be Scissors but got", choice(2))
+	if randomChoice(2) != decide.Scissors {
+		t.Error("choice 2 should be Scissors but got", randomChoice(2))
 	}
 }
