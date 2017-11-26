@@ -29,8 +29,7 @@ func printResultArt(arts, result string) {
 }
 
 func main() {
-	clearScreen()
-	clearScreen()
+	clearFullScreen()
 	showFirstPage()
 
 	userScore := score.New()
@@ -44,6 +43,7 @@ func main() {
 		if userKey == "exit" {
 			os.Exit(0)
 		}
+		clearFullScreen()
 		fmt.Printf(utils.ResetColor)
 		u := utils.MapUserKey(userKey)
 
@@ -70,6 +70,11 @@ func main() {
 		fmt.Fprintln(os.Stderr, "error:", err)
 		os.Exit(1)
 	}
+}
+
+func clearFullScreen() {
+	clearScreen()
+	clearScreen()
 }
 func clearScreen() {
 	for i := 0; i < 20; i++ {
