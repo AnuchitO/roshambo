@@ -15,6 +15,8 @@ func Count(user Scorer, resultUser string, computer Scorer) {
 		return
 	}
 
-	user.IncTie()
-	computer.IncTie()
+	if resultUser == decide.TIE {
+		user.IncTie()
+		computer.IncTie()
+	}
 }

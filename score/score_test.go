@@ -78,3 +78,18 @@ func TestIncreaseTieScore(t *testing.T) {
 		t.Errorf("expect % #v \n but got % #v", comScore, computer)
 	}
 }
+
+func TestUnkownResultShouldNotDoAnything(t *testing.T) {
+
+	user := &Score{1, 1, 2}
+	computer := &Score{2, 2, 2}
+
+	Count(user, "unkown", computer)
+
+	if !reflect.DeepEqual(user, &Score{1, 1, 2}) {
+		t.Errorf("expect user % #v \n but got % #v", &Score{1, 1, 2}, user)
+	}
+	if !reflect.DeepEqual(computer, &Score{2, 2, 2}) {
+		t.Errorf("expect computer % #v \n but got % #v", &Score{2, 2, 2}, computer)
+	}
+}
