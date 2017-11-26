@@ -7,33 +7,45 @@ import (
 )
 
 func TestSplitArtAscii(t *testing.T) {
-	a := splitArtAscii(paperArt)
+	a := splitArtAscii(PaperArt)
 
 	if !reflect.DeepEqual(a, strings.Split(PaperArt, "\n")) {
 		t.Error("split art ascii wrong")
 	}
 }
 
-func TestMaxWidthPaperArt(t *testing.T) {
-	m := maxWidth(splitArtAscii(PaperArt))
+func TestHightShouldBeEqual(t *testing.T) {
+	pl := len(splitArtAscii(PaperArt))
+	rl := len(splitArtAscii(RockArt))
+	sl := len(splitArtAscii(ScissorsArt))
+	if !(pl == rl && rl == sl) {
+		t.Errorf("line Hight should be equal but got paper: %d scissors: %d rock: %d \n", pl, sl, rl)
+	}
+}
 
-	if m != 53 {
-		t.Errorf(" max width should be %d but got %d", 53, m)
+func TestMaxWidthPaperArt(t *testing.T) {
+	actual := maxWidth(splitArtAscii(PaperArt))
+
+	expected := 64
+	if actual != expected {
+		t.Errorf(" max width should be %d but got %d", expected, actual)
 	}
 }
 
 func TestMaxWidthScissorsArt(t *testing.T) {
-	m := maxWidth(splitArtAscii(ScissorsArt))
+	actual := maxWidth(splitArtAscii(ScissorsArt))
 
-	if m != 37 {
-		t.Errorf(" max width should be %d but got %d", 37, m)
+	expected := 65
+	if actual != expected {
+		t.Errorf(" max width should be %d but got %d", expected, actual)
 	}
 }
 
 func TestMaxWidthRockArt(t *testing.T) {
-	m := maxWidth(splitArtAscii(RockArt))
+	actual := maxWidth(splitArtAscii(RockArt))
 
-	if m != 48 {
-		t.Errorf(" max width should be %d but got %d", 48, m)
+	expected := 64
+	if actual != expected {
+		t.Errorf(" max width should be %d but got %d", expected, actual)
 	}
 }
