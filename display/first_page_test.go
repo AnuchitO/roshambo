@@ -20,7 +20,7 @@ func TestFirstPage(t *testing.T) {
 }
 
 func TestHint(t *testing.T) {
-	expected := " computer should next decide already. choose your next decide. w:scissors, b:rock, p:paper  , chose your choice and press enter:"
+	expected := " computer should next decide already. choose your next decide. w:scissors, b:rock, p:paper (type `exit` for exit) , chose your choice and press enter:"
 	if Hint() != expected {
 		t.Errorf("expected %s \n but got %s", expected, Hint())
 	}

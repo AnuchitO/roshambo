@@ -19,3 +19,7 @@ Run:
   1 b = rock
   1 p = paper
 1 press enter after you choosed
+
+Exit:
+====
+* type `exit` and hit enter for exit program

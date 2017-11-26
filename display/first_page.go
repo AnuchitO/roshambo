@@ -13,7 +13,7 @@ func FirstPage() []string {
 
 func Hint() string {
 	comChoosed := " computer should next decide already."
-	chooseYourChoice := " choose your next decide. w:scissors, b:rock, p:paper  "
+	chooseYourChoice := " choose your next decide. w:scissors, b:rock, p:paper (type `exit` for exit) "
 	yourChoice := ", chose your choice and press enter:"
 	return comChoosed + chooseYourChoice + yourChoice
 }
