@@ -45,7 +45,15 @@ func main() {
 			os.Exit(0)
 		}
 		fmt.Printf(utils.ResetColor)
-		user, com, result := p.Play(utils.MapUserKey(userKey))
+		u := utils.MapUserKey(userKey)
+
+		if u == "" {
+			banner.Print("unknow choice")
+			fmt.Println(display.Hint())
+			continue
+		}
+
+		user, com, result := p.Play(u)
 		banner.Print(display.Title(""))
 		arts := display.Display(user, com)
 		printDecided(arts)
