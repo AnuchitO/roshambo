@@ -16,39 +16,30 @@ func assertMePosition(title string, t *testing.T) {
 	}
 }
 
-func assertComputerPosition(title string, t *testing.T) {
+func assertComputerPosition(title string, p int, t *testing.T) {
 	c := strings.Index(title, "computer")
-	if c != 18 {
-		t.Error("computer should be at position 18 but got ", c)
-	}
-}
-
-func assertTitleLength(title string, t *testing.T) {
-	if len(title) != titleLength {
-		t.Error("expect tile length ", titleLength, " but got ", len(title))
+	if c != p {
+		t.Error("computer should be at position ", p, " but got ", c)
 	}
 }
 
 func TestTitleShouldBeFixLenghtWhenWIN(t *testing.T) {
 	title := Title(decide.WIN)
 
-	assertTitleLength(title, t)
 	assertMePosition(title, t)
-	assertComputerPosition(title, t)
+	assertComputerPosition(title, 17, t)
 }
 
 func TestTitleShouldBeFixLenghtWhenLOSS(t *testing.T) {
 	title := Title(decide.LOSS)
 
-	assertTitleLength(title, t)
 	assertMePosition(title, t)
-	assertComputerPosition(title, t)
+	assertComputerPosition(title, 18, t)
 }
 
 func TestTitleShouldBeFixLenghtWhenTIE(t *testing.T) {
 	title := Title(decide.TIE)
 
-	assertTitleLength(title, t)
 	assertMePosition(title, t)
-	assertComputerPosition(title, t)
+	assertComputerPosition(title, 19, t)
 }
