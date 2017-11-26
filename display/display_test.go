@@ -4,6 +4,8 @@ import (
 	"reflect"
 	"strings"
 	"testing"
+
+	"github.com/AnuchitPrasertsang/roshambo/decide"
 )
 
 func TestSplitArtAscii(t *testing.T) {
@@ -71,5 +73,13 @@ func TestDisplay(t *testing.T) {
 	expected := "leftright\nleft 2right 2"
 	if d != expected {
 		t.Errorf("expect %s, but got %s", expected, d)
+	}
+}
+
+func TestGetArt(t *testing.T) {
+	art := GetArt(decide.Rock)
+
+	if len(art) < 1 {
+		t.Error("art is empty")
 	}
 }
