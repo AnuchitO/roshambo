@@ -49,3 +49,16 @@ func TestMaxWidthRockArt(t *testing.T) {
 		t.Errorf(" max width should be %d but got %d", expected, actual)
 	}
 }
+
+func TestConcatSameLineForDisplay(t *testing.T) {
+	r := []string{"rline 1 ", "rline 2 ", "rline 3 "}
+	p := []string{"pline 1 ", "pline 2 ", "pline 3 "}
+
+	result := concatSameLineForDisplay(r, p)
+
+	expected := "rline 1 pline 1 \nrline 2 pline 2 \nrline 3 pline 3 "
+
+	if result != expected {
+		t.Errorf("expect:\n % #v\n but got: \n % #v\n", expected, result)
+	}
+}

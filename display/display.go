@@ -16,3 +16,11 @@ func maxWidth(art []string) int {
 	}
 	return l
 }
+
+func concatSameLineForDisplay(artLeft, artRight []string) string {
+	result := []string{}
+	for i := 0; i < len(artLeft); i++ {
+		result = append(result, artLeft[i]+artRight[i])
+	}
+	return strings.Join(result, "\n")
+}
