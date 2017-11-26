@@ -66,13 +66,11 @@ func TestConcatSameLineForDisplay(t *testing.T) {
 }
 
 func TestDisplay(t *testing.T) {
-	ua := "left\nleft 2"
-	ca := "right\nright 2"
-	d := Display(ua, ca)
+	d := Display(decide.Paper, decide.Rock)
 
-	expected := "leftright\nleft 2right 2"
-	if d != expected {
-		t.Errorf("expect %s, but got %s", expected, d)
+	lenOfConcat := 3871
+	if len(d) != lenOfConcat {
+		t.Errorf("expect %d, but got '%d'", lenOfConcat, len(d))
 	}
 }
 

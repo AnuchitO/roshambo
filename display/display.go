@@ -27,6 +27,8 @@ func GetArt(roshambo string) string {
 	return arts[roshambo]
 }
 
-func Display(userArt, computerArt string) string {
+func Display(user, computer string) string {
+	userArt := GetArt(user)
+	computerArt := GetArt(computer)
 	return concatSameLineForDisplay(splitArtAscii(userArt), splitArtAscii(computerArt))
 }
