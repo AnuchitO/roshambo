@@ -14,10 +14,10 @@ Run:
 ```
 ./roshambo
 ```
-1 press button
-  1 w = scissors
-  1 b = rock
-  1 p = paper
+press button
+1 w = scissors
+1 b = rock
+1 p = paper
 1 press enter after you choosed
 
 Exit:
