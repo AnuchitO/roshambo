@@ -14,7 +14,8 @@ Run:
 ```
 ./roshambo
 ```
-press button
+Press button
+
 1 w = scissors
 1 b = rock
 1 p = paper
